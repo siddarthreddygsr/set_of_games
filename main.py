@@ -13,7 +13,7 @@ while True:
         print('Enter QUIT to break this loop')
         print('Press help for help . Oh i forgot that is the way i got here right XD')
 
-    #cybertrauma a.k.a Siddarth Reddy
+    #cybertrauma
     elif cmd == '1':
         data = ["1","2","3","4","5","6","7","8","9"]
         
@@ -74,24 +74,18 @@ while True:
                 break
             elif turn%2 == 1:
                 x = int(input("enter(player X):"))
-                if x.lower() == "quit":
-                    break
-                else:
-                    marker(data,x,turn)
-                    turn += 1
-                    print(board(data))
+                marker(data,x,turn)
+                turn += 1
+                print(board(data))
             elif turn%2 == 0:
                 x = int(input("enter(player O):"))
-                if x.lower() == "quit":
-                    break
-                else:
-                    marker(data,x,turn)
-                    turn += 1
-                    print(board(data))
+                marker(data,x,turn)
+                turn += 1
+                print(board(data))
         if turn == 9 and  win_check(data) != 1:
             print("this was a TIE")
         print("Press 1 to play again.....")
-    #cybertrauma a.k.a Siddarth Reddy
+    #cybertrauma
     elif cmd == '2':
         data = ["1","2","3","4","5","6","7","8","9"]
         def board(data):
@@ -152,13 +146,10 @@ while True:
                 break
             elif turn%2 == 1:
                 x = int(input("enter(USER):"))
-                if x.lower() == "quit":
-                    break
-                else:
-                    marker(data,x,turn)
-                    turn += 1
-                    print(board(data))
-                    mylist.remove(x)
+                marker(data,x,turn)
+                turn += 1
+                print(board(data))
+                mylist.remove(x)
             elif turn%2 == 0:
                 x = random.choice(mylist)
                 print(f"computer's input was {x}")
@@ -181,9 +172,15 @@ while True:
             print(f"user's score is     {user}")
         while True:
             x = random.choice(list)
+            print('ENTER HELP FOR INSTRUCTIONS!!!')
             y = input("Rock?Paper? or scissor?").lower()
             if y.lower() == "quit":
                 break
+            elif y.lower() == 'help':
+                print("ENTER QUIT AT ANY POINT TO GO BACK TO PREV> MENU")
+                print("I Apologize i didn't find any proper instructions")
+                print("ARE YOU Connected to dark web??")
+                
             else:
                 if computer == 5:
                     print('Computer won the game')
@@ -229,7 +226,7 @@ while True:
                     show_score(x,y)
                 else:
                     print("something is wrong")
-     #cybertrauma a.k.a Siddarth Reddy
+    #cybertrauma
     elif cmd == '4':
         
         word_list = ['wares','soup','mount','extend','brown','expert','tired','humidity','backpack','crust','dent','market','knock','smite','windy','coin','throw','silence','bluff','downfall','climb','lying','weaver','snob','kickoff','match','quaker','foreman','excite','thinking','mend','allergen','pruning','coat','emerald','coherent','manic','multiple','square','funded','funnel','sailing','dream','mutation','strict',
@@ -412,20 +409,18 @@ while True:
         print(rand_number)
         while True:
             user_guess = int(input("GUESS A NUMBER BETWEEN 0 and 100 : "))
-            if user_guess.lower() == 'quit':
-                break
-            else:
-                if  rand_number>user_guess:
-                    print('Your Guess was lower than the number. Try again!')
-                elif user_guess>rand_number:
-                    print('Your Guess was higher that the number. Try again!')
-                elif rand_number == user_guess:
-                    print('Congratulations! You guessed it right')
-                    print("press 6 to start over!")  
-                    break 
+            if  rand_number>user_guess:
+                print('Your Guess was lower than the number. Try again!')
+            elif user_guess>rand_number:
+                print('Your Guess was higher that the number. Try again!')
+            elif rand_number == user_guess:
+                print('Congratulations! You guessed it right')
+                print("press 6 to start over!")  
+                break 
         
 
     elif cmd.lower() == 'quit':
         break
+
 
 
