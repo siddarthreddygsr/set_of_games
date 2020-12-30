@@ -89,7 +89,7 @@ while True:
             while True:
                     if x >9 or x <0:
                         print("try again !Wrong input")
-                        x = int(input("enter"))
+                        x = int(input("enter(USER)"))
                     elif data[x-1] =="X" or data[x-1] == "O":
                         print("try again !Wrong input")
                         x = int(input("enter"))
@@ -146,6 +146,7 @@ while True:
                 mylist.remove(x)
             elif turn%2 == 0:
                 x = random.choice(mylist)
+                print(f"computer's input was {x}")
                 marker(data,x,turn)
                 turn += 1
                 print(board(data))
