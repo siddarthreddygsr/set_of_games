@@ -13,7 +13,7 @@ while True:
         print('Enter QUIT to break this loop')
         print('Press help for help . Oh i forgot that is the way i got here right XD')
 
-    #cybertrauma
+    #cybertrauma a.k.a Siddarth Reddy
     elif cmd == '1':
         data = ["1","2","3","4","5","6","7","8","9"]
         
@@ -74,7 +74,7 @@ while True:
                 break
             elif turn%2 == 1:
                 x = int(input("enter(player X):"))
-                if x.lower() = "quit":
+                if x.lower() == "quit":
                     break
                 else:
                     marker(data,x,turn)
@@ -82,7 +82,7 @@ while True:
                     print(board(data))
             elif turn%2 == 0:
                 x = int(input("enter(player O):"))
-                if x.lower() = "quit":
+                if x.lower() == "quit":
                     break
                 else:
                     marker(data,x,turn)
@@ -91,7 +91,7 @@ while True:
         if turn == 9 and  win_check(data) != 1:
             print("this was a TIE")
         print("Press 1 to play again.....")
-    #cybertrauma
+    #cybertrauma a.k.a Siddarth Reddy
     elif cmd == '2':
         data = ["1","2","3","4","5","6","7","8","9"]
         def board(data):
@@ -152,7 +152,7 @@ while True:
                 break
             elif turn%2 == 1:
                 x = int(input("enter(USER):"))
-                if x.lower() = "quit":
+                if x.lower() == "quit":
                     break
                 else:
                     marker(data,x,turn)
@@ -182,7 +182,7 @@ while True:
         while True:
             x = random.choice(list)
             y = input("Rock?Paper? or scissor?").lower()
-            if y.lower() = "quit":
+            if y.lower() == "quit":
                 break
             else:
                 if computer == 5:
@@ -229,7 +229,7 @@ while True:
                     show_score(x,y)
                 else:
                     print("something is wrong")
-    #cybertrauma
+     #cybertrauma a.k.a Siddarth Reddy
     elif cmd == '4':
         
         word_list = ['wares','soup','mount','extend','brown','expert','tired','humidity','backpack','crust','dent','market','knock','smite','windy','coin','throw','silence','bluff','downfall','climb','lying','weaver','snob','kickoff','match','quaker','foreman','excite','thinking','mend','allergen','pruning','coat','emerald','coherent','manic','multiple','square','funded','funnel','sailing','dream','mutation','strict',
@@ -412,7 +412,7 @@ while True:
         print(rand_number)
         while True:
             user_guess = int(input("GUESS A NUMBER BETWEEN 0 and 100 : "))
-            if user_guess.lower() = 'quit':
+            if user_guess.lower() == 'quit':
                 break
             else:
                 if  rand_number>user_guess:
