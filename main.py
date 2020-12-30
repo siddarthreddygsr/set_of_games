@@ -151,7 +151,7 @@ while True:
                 print(board(data))
         if turn == 9 and  win_check(data) != 1:
             print("this was a TIE")
-    #cybertrauma
+    #AbhiramKonduru
     elif cmd == '3':
         print("NOTE: the person to score 5 points first wins")
         list = ["rock","paper","scissor"]
