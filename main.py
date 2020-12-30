@@ -1,7 +1,12 @@
 import random
+print("PRESS HELP TO GET INSTRUCTIONS")
+print('Press 1 for Tic Tac Toe\nPress 2 to play tictactoe with computer\nPress 3 for Rock Paper Scissor\nPress 4 for Hangman')
+print('Press 5 for Basic Car game\nPress 6 for Number Guessing Game')
+print('Enter QUIT to break this loop')
 while True:
     cmd = input(">")
     if cmd.lower() == "help":
+        
         print('Press 1 for Tic Tac Toe\nPress 2 to play tictactoe with computer\nPress 3 for Rock Paper Scissor\nPress 4 for Hangman')
         print('Press 5 for Basic Car game\nPress 6 for Number Guessing Game')
         print('Enter QUIT to break this loop')
@@ -68,14 +73,20 @@ while True:
                 break
             elif turn%2 == 1:
                 x = int(input("enter(player X):"))
-                marker(data,x,turn)
-                turn += 1
-                print(board(data))
+                if x.lower() = "quit":
+                    break
+                else:
+                    marker(data,x,turn)
+                    turn += 1
+                    print(board(data))
             elif turn%2 == 0:
                 x = int(input("enter(player O):"))
-                marker(data,x,turn)
-                turn += 1
-                print(board(data))
+                if x.lower() = "quit":
+                    break
+                else:
+                    marker(data,x,turn)
+                    turn += 1
+                    print(board(data))
         if turn == 9 and  win_check(data) != 1:
             print("this was a TIE")
         print("Press 1 to play again.....")
@@ -140,10 +151,13 @@ while True:
                 break
             elif turn%2 == 1:
                 x = int(input("enter(USER):"))
-                marker(data,x,turn)
-                turn += 1
-                print(board(data))
-                mylist.remove(x)
+                if x.lower() = "quit":
+                    break
+                else:
+                    marker(data,x,turn)
+                    turn += 1
+                    print(board(data))
+                    mylist.remove(x)
             elif turn%2 == 0:
                 x = random.choice(mylist)
                 print(f"computer's input was {x}")
@@ -167,50 +181,53 @@ while True:
         while True:
             x = random.choice(list)
             y = input("Rock?Paper? or scissor?").lower()
-            if computer == 5:
-                print('Computer won the game')
-                print('exiting to main menu...')
+            if y.lower() = "quit":
                 break
-            elif user == 5:
-                print('User won the game')
-                print('exiting to main menu...')
-                break
-            elif x == y:
-                show_input(x,y)
-                print("This was a tie")
-                show_score(x,y)
-            elif x == "rock" and y == "paper" :
-                show_input(x,y)
-                print("User got a point")
-                user +=1
-                show_score(x,y)
-            elif y == "rock" and x == "paper":
-                show_input(x,y)
-                print("Computer got a point")
-                computer +=1
-                show_score(x,y)
-            elif x == "rock" and y == "scissor" :
-                show_input(x,y)
-                print("Computer got a point")
-                computer +=1
-                show_score(x,y)
-            elif y == "rock" and x == "scissor" :
-                show_input(x,y)
-                print("User got a point")
-                user +=1
-                show_score(x,y)
-            elif x == "scissor" and y == "paper" :
-                show_input(x,y)
-                print("Computer got a point")
-                computer +=1
-                show_score(x,y)
-            elif y == "scissor" and x == "paper" :
-                show_input(x,y)
-                print("user got a point")
-                user +=1
-                show_score(x,y)
             else:
-                print("something is wrong")
+                if computer == 5:
+                    print('Computer won the game')
+                    print('exiting to main menu...')
+                    break
+                elif user == 5:
+                    print('User won the game')
+                    print('exiting to main menu...')
+                    break
+                elif x == y:
+                    show_input(x,y)
+                    print("This was a tie")
+                    show_score(x,y)
+                elif x == "rock" and y == "paper" :
+                    show_input(x,y)
+                    print("User got a point")
+                    user +=1
+                    show_score(x,y)
+                elif y == "rock" and x == "paper":
+                    show_input(x,y)
+                    print("Computer got a point")
+                    computer +=1
+                    show_score(x,y)
+                elif x == "rock" and y == "scissor" :
+                    show_input(x,y)
+                    print("Computer got a point")
+                    computer +=1
+                    show_score(x,y)
+                elif y == "rock" and x == "scissor" :
+                    show_input(x,y)
+                    print("User got a point")
+                    user +=1
+                    show_score(x,y)
+                elif x == "scissor" and y == "paper" :
+                    show_input(x,y)
+                    print("Computer got a point")
+                    computer +=1
+                    show_score(x,y)
+                elif y == "scissor" and x == "paper" :
+                    show_input(x,y)
+                    print("user got a point")
+                    user +=1
+                    show_score(x,y)
+                else:
+                    print("something is wrong")
     #cybertrauma
     elif cmd == '4':
         
@@ -394,14 +411,17 @@ while True:
         print(rand_number)
         while True:
             user_guess = int(input("GUESS A NUMBER BETWEEN 0 and 100 : "))
-            if  rand_number>user_guess:
-                print('Your Guess was lower than the number. Try again!')
-            elif user_guess>rand_number:
-                print('Your Guess was higher that the number. Try again!')
-            elif rand_number == user_guess:
-                print('Congratulations! You guessed it right')
-                print("press 6 to start over!")  
-                break 
+            if user_guess.lower() = 'quit':
+                break
+            else:
+                if  rand_number>user_guess:
+                    print('Your Guess was lower than the number. Try again!')
+                elif user_guess>rand_number:
+                    print('Your Guess was higher that the number. Try again!')
+                elif rand_number == user_guess:
+                    print('Congratulations! You guessed it right')
+                    print("press 6 to start over!")  
+                    break 
         
 
     elif cmd.lower() == 'quit':
