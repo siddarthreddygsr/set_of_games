@@ -1,9 +1,10 @@
 import random
-print("PRESS HELP TO GET INSTRUCTIONS")
-print('Press 1 for Tic Tac Toe\nPress 2 to play tictactoe with computer\nPress 3 for Rock Paper Scissor\nPress 4 for Hangman')
-print('Press 5 for Basic Car game\nPress 6 for Number Guessing Game')
-print('Enter QUIT to break this loop')
+
 while True:
+    print("PRESS HELP TO GET INSTRUCTIONS")
+    print('Press 1 for Tic Tac Toe\nPress 2 to play tictactoe with computer\nPress 3 for Rock Paper Scissor\nPress 4 for Hangman')
+    print('Press 5 for Basic Car game\nPress 6 for Number Guessing Game')
+    print('Enter QUIT to break this loop')
     cmd = input(">")
     if cmd.lower() == "help":
         
